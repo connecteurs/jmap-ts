@@ -1,6 +1,6 @@
 {
   "name": "@connecteurs/jmap-core-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "io-ts codecs for JMAP Core objects",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@connecteurs/io-ts-utils": "0.0.1",
+    "@connecteurs/io-ts-utils": "^0.0.2",
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
