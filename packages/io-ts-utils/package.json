@@ -1,6 +1,6 @@
 {
   "name": "@connecteurs/io-ts-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "io-ts utils",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
