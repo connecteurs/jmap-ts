@@ -39,7 +39,8 @@
     "typescript": "^3.9.5"
   },
   "files": [
-    "./lib"
+    "lib",
+    "!lib/*.tsbuildinfo"
   ],
   "publishConfig": {
     "access": "public"
