@@ -1,11 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "es2020",
+    "baseUrl": ".",
+    "incremental": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "@connecteurs/*": ["packages/*/src"]
+    }
   }
 }

@@ -4,12 +4,15 @@
   "description": "io-ts codecs for JMAP Core objects",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "types": "./lib/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc:esm": "tsc -p tsconfig-esm.json",
-    "tsc:cjs": "tsc -p tsconfig-cjs.json",
-    "tsc": "npm run tsc:esm && npm run tsc:cjs"
+    "tsc:esm": "tsc -p tsconfig.esm.json",
+    "tsc:cjs": "tsc -p tsconfig.cjs.json",
+    "tsc:types": "tsc -p tsconfig.types.json",
+    "tsc": "npm run tsc:esm && npm run tsc:cjs && npm run tsc:types",
+    "clean": "rimraf lib **/*.tsbuildinfo",
+    "prepare": "npm run clean && npm run tsc"
   },
   "keywords": [
     "jmap",
@@ -21,15 +24,19 @@
     "email": "ludovic@connecteu.rs"
   },
   "license": "MIT",
+  "dependencies": {
+    "@connecteurs/io-ts-utils": "0.0.1",
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
-    "@connecteurs/io-ts-utils": "^0.0.1",
     "fp-ts": "^2.6.5",
-    "io-ts": "^2.2.4"
+    "io-ts": "^2.2.5"
   },
   "devDependencies": {
-    "@connecteurs/io-ts-utils": "^0.0.1",
     "fp-ts": "^2.6.5",
-    "io-ts": "^2.2.4"
+    "io-ts": "^2.2.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.5"
   },
   "files": [
     "./lib"
